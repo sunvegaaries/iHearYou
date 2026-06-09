@@ -1,0 +1,40 @@
+# Build artifacts
+build/
+*.exe
+*.o
+*.a
+*.so
+*.dll
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Android
+*.iml
+.gradle/
+local.properties
+.idea/
+android-receiver/.idea/
+android-receiver/build/
+android-receiver/app/build/
+android-receiver/local.properties
+*.apk
+*.aab
+*.ap_
+
+# NDK / native
+.externalNativeBuild/
+.cxx/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*~

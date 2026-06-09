@@ -1,0 +1,37 @@
+[package]
+name = "audioshare-sender"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "audioshare-sender"
+path = "src/main.rs"
+
+[dependencies]
+# Audio capture (cross-platform: WASAPI / CoreAudio / ALSA)
+cpal = "0.15"
+
+# Opus encode/decode
+audiopus = "0.3"
+
+# GUI
+eframe = { version = "0.27", features = ["default"] }
+egui   = "0.27"
+
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# Utils
+anyhow      = "1"
+log         = "0.4"
+env_logger  = "0.11"
+crossbeam-channel = "0.5"
+
+[profile.release]
+opt-level     = 3
+strip         = true   # smaller binary
+lto           = true
+
+# Windows: no console window in release (GUI app)
+[target.'cfg(windows)'.build-dependencies]
+winresource = "0.1"
