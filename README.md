@@ -1,4 +1,4 @@
-# AudioShare v2
+# iHearYou
 
 Stream audio from PC to Android phone over local Wi-Fi.
 Phone acts as a wireless speaker — low latency, battery-efficient.
@@ -14,7 +14,7 @@ Control plane: adaptive FEC + bitrate based on network conditions + thermal stat
 ## Structure
 
 ```
-audioshare-v2/
+ihearyou/
 ├── pc-sender/          # Rust: cpal + audiopus + egui + UDP
 ├── android-receiver/   # Kotlin + NDK: AAudio + Opus JNI
 └── docs/protocol.md
